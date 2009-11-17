@@ -7,23 +7,12 @@ Version: 1.0
 Author: Crowd Favorite
 Author URI: http://crowdfavorite.com
 */
-/***************************
-* Example Image Size Array *
-***************************/
-/*
-$cf_custom_image_sizes = array(
-	'nav_bar_logo' => array(
-		'size_w' => 95,
-		'size_h' => 37,
-		'crop' => true
-	),
-	'square_logo' => array(
-		'size_w' => 50,
-		'size_h' => 50,
-		'crop' => false
-	),
-);
-*/
+
+/**
+ * cf_setup_custom_image_sizes()
+ * Function to add all necessary filters to enable a custom image size
+ * @return void
+ */
 function cf_setup_custom_image_sizes() {
 	global $cf_custom_image_sizes; 
 
@@ -38,6 +27,12 @@ function cf_setup_custom_image_sizes() {
 }
 add_action('init', 'cf_setup_custom_image_sizes');
 
+/**
+ * cf_add_image_sizes
+ * Makes WordPress aware of the new sizes, and their specific 'handle'
+ * @param array $sizes 
+ * @return array
+ */
 function cf_add_image_sizes($sizes) {
 	global $cf_custom_image_sizes;
 	
@@ -49,6 +44,13 @@ function cf_add_image_sizes($sizes) {
 }
 add_filter('intermediate_image_sizes', 'cf_add_image_sizes');
 
+/**
+ * cf_custom_image_filterer()
+ * This is the function that executes during each custom image size filter.  It parses the 
+ * config array and returns the appropriate value for the specific filter WordPress is running.
+ * @param mixed $val 
+ * @return int/bool
+ */
 function cf_custom_image_filterer($val) {
 	global $wp_current_filter, $cf_custom_image_sizes;
 	

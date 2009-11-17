@@ -1,0 +1,4 @@
+# CF Custom Image Sizes
+
+## 1.0
+- Initial Release

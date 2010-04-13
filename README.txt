@@ -4,7 +4,9 @@ The CF Custom Image Sizes plugin creates an easy way to add custom image sizes t
 
 ## Implementation
 
-This plugin is implemented by adding a filter to the `cf_custom_image_sizes` filter application.  The added filter could be coded either into another plugin or into the functions.php file in the theme.
+This plugin is implemented by adding a filter to the `cf_custom_image_sizes` filter executed during the 'init' action.  The added filter could be coded either into another plugin or into the functions.php file in the theme.
+
+Use the "key", set for the size's name in the config (e.g., '`nifty_square_logo`'), to reference that custom size inside the theme.
 
 ## Dependencies
 

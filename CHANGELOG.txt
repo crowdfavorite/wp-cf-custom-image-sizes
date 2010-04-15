@@ -1,4 +1,7 @@
 # CF Custom Image Sizes
 
+## 1.1 (trunk)
+- Updated README.txt examples
+
 ## 1.0
 - Initial Release

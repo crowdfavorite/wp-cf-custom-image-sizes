@@ -3,7 +3,7 @@
 Plugin Name: CF Custom Image Sizes
 Plugin URI: http://crowdfavorite.com
 Description: Enables a filterable list of custom image sizes
-Version: 1.0
+Version: 1.1 (trunk)
 Author: Crowd Favorite
 Author URI: http://crowdfavorite.com
 */

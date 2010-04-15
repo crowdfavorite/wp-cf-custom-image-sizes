@@ -14,6 +14,8 @@ There are no dependencies for this plugin, beyond PHP extensions (e.g., "GD") wh
 
 ## Example
 
+In Plugin or theme's functions.php file:
+
 	function cf_add_custom_image_sizes_config($sizes) {
 		$cf_custom_image_sizes = array(
 			'new_rectangular_logo' => array(
@@ -30,6 +32,10 @@ There are no dependencies for this plugin, beyond PHP extensions (e.g., "GD") wh
 		return array_merge($sizes, $cf_custom_image_sizes);
 	}
 	add_filter('cf_custom_image_sizes', 'cf_add_custom_image_sizes_config');
+
+In template file, you need to reference custom image size:
+
+	echo wp_get_attachment_image( [img post_id: e.g., 5], 'new_rectangular_logo' );
 
 ## Available Filters
 

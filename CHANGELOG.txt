@@ -2,6 +2,7 @@
 
 ## 1.1 (trunk)
 - Updated README.txt examples
+- Tested successfully on WordPress 3.0
 
 ## 1.0
 - Initial Release
